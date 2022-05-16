@@ -1,0 +1,190 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Portfolio & Resume webpage">
+		<meta name="author" content="Jesse Acosta">
+
+		<link type="text/css" href="https://fonts.googleapis.com/css?family=Lobster|Montserrat|Raleway" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+		<link rel="shortcut icon" href="{% static 'homepage/images/icon.png' %}" />
+		<title>Software Developer</title>
+
+		<!-- CSS -->
+		<link href="{% static 'homepage/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+		<link href="{% static 'homepage/css/font-awesome.min.css' %}" rel="stylesheet" media="screen">
+		<link href="{% static 'homepage/css/animate.css" rel="stylesheet' %}">
+
+		<!-- Custom styles CSS -->
+		<link href="{% static 'homepage/css/style.css' %}" rel="stylesheet" media="screen">
+
+		<script src="{% static 'homepage/js/modernizr.custom.js' %}"></script>
+
+	</head>
+	<body>
+
+		<div id="preloader">
+			<div id="status"></div>
+		</div>
+
+		<section id="home" class="pfblock-image screen-height">
+			<div class="home-overlay"></div>
+			<div class="intro">
+				<div class="start">Hello, my name is Jesse Acosta and I am</div>
+				<h1>Software Developer</h1>
+				<h1>University of Waterloo Undergraduate</h1>
+				<div class="start">Enrolled in the Computer Engineering program, 4A.</div>
+			</div>
+
+			<a href="#services">
+				<div class="scroll-down">
+					<span>
+						<i class="fa fa-angle-down fa-2x"></i>
+					</span>
+				</div>
+			</a>
+		</section>
+
+		<header class="header">
+			{% include 'homepage/header.html' %}
+		</header>
+
+		<section id="services" class="pfblock pfblock-gray">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="pfblock-header wow fadeInUp">
+							<h2 class="pfblock-title">ABOUT ME</h2>
+							<div class="pfblock-line"></div>
+							<div class="pfblock-subtitle">
+								<p>
+									I am a student at the University of Waterloo in the Computer Engineering program. I enjoy tinkering with computers as well as 
+									programming. I invested substantial time in learning the Python language, but also invested time into learning the C family of 
+									programming language, mainly the C and C++ languages.
+								</p>
+								<p>
+									Programming is a passion of mine and I thouroughly enjoy using Python for data visualization and machine learning, developing backend 
+									software for research purposes as I have contributed data and graphs to various groups. Mainly to groups of scientist in the Canadian 
+									government in the National Resource Canada sector, notably in the Earthquake and Space Weather groups.
+								</p>
+								<p>
+									I enjoy working in a team-based environment working towards a common goal as demonstrated in my experiences. The feedback, discussion, 
+									and review in this environment brings out the best in each individual member, and is a crucial component in my own personal development. 
+									I'm ready to jump onto a supportive team and begin contributing.
+								</p>
+								<a href="https://docs.google.com/document/d/1fN_V0mO_z-SPU8pIR9xOU1Mmw_Qf_Upr/edit?usp=sharing&ouid=102100722863901957954&rtpof=true&sd=true" target="_blank" id="resume-effect"><i class="fa fa-3x fa-file-text-o" aria-hidden="true"></i> Click to view my resume.</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-4">
+						<div class="pfblock-header wow fadeInUp">
+							<img id="myphoto" src="{% static 'homepage/images/self.jpeg' %}" alt="Jesse Acosta" style="border-radius:100%; filter:grayscale(30%);">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="work" class="pfblock">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<div class="pfblock-header wow fadeInUp">
+							<h2 class="pfblock-title">Work Experience</h2>
+							<div class="pfblock-line"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					{% include 'homepage/work.html' %}
+					{% include 'homepage/skills.html' %}
+				</div>
+			</div>
+		</section>
+
+		<section id="volunteer" class="pfblock pfblock-gray">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<div class="pfblock-header wow fadeInUp">
+							<h2 class="pfblock-title">Volunteer Experience</h2>
+							<div class="pfblock-line"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					{% include 'homepage/volunteer.html' %}
+				</div>
+			</div>
+		</section>
+
+		<section id="education" class="pfblock">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<div class="pfblock-header wow fadeInUp">
+							<h2 class="pfblock-title">Education</h2>
+							<div class="pfblock-line"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					{% include 'homepage/education.html' %}
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="pfblock pfblock-gray">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<div class="pfblock-header">
+						<h2 class="pfblock-title">Contact</h2>
+						<div class="pfblock-line"></div>
+						<div class="pfblock-subtitle">
+							I am currently accepting employment and would like to get in touch with you. 
+							After you introduce yourself, I'll get it touch with you to schedule a time to chat.
+							If you like to simply have a chat, I would gladly get back to you as soon as possible.
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				{% include 'homepage/contact.html' %}
+			</div>
+		</section>
+
+		<footer id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<ul class="social-links">
+							<li><a href="https://www.linkedin.com/in/jesseacosta9172/" class="wow fadeInUp" data-wow-delay=".1s" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="https://github.com/MajorManson" class="wow fadeInUp" data-wow-delay=".2s" target="_blank"><i class="fa fa-github"></i></a></li>
+							<li><a href="mailto:ajessebo2@gmail.com" class="wow fadeInUp" data-wow-delay=".4s"><i class="fa fa-envelope"></i></a></li>
+						</ul>
+
+						<p class="copyright"> Feel free to email me, or visit my GitHub and LinkedIn pages.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="{% static 'homepage/js/jquery-1.11.1.min.js' %}"></script>
+		<script src="{% static 'homepage/bootstrap/js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'homepage/js/jquery.parallax-1.1.3.js' %}"></script>
+		<script src="{% static 'homepage/js/imagesloaded.pkgd.js' %}"></script>
+		<script src="{% static 'homepage/js/jquery.sticky.js' %}"></script>
+		<script src="{% static 'homepage/js/smoothscroll.js' %}"></script>
+		<script src="{% static 'homepage/js/wow.min.js' %}"></script>
+		<script src="{% static 'homepage/js/waypoints.min.js' %}"></script>
+		<script src="{% static 'homepage/js/jquery.cbpQTRotator.js' %}"></script>
+		<script src="{% static 'homepage/js/custom.js' %}"></script>
+	</body>
+</html>
